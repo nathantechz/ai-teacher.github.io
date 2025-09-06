@@ -293,6 +293,15 @@
             font-weight: bold;
             box-shadow: 0 3px 5px rgba(0,0,0,0.2);
         }
+
+        .url-example {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: white;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
@@ -313,57 +322,47 @@
                 <p>All courses are designed to work completely offline after initial setup. Your data never leaves your computer, ensuring complete privacy. No internet required after downloading the necessary tools and models!</p>
             </div>
             
-            <h2 style="text-align: center; color: #333; margin: 30px 0;">Why Learn AI Offline?</h2>
+            <h2 style="text-align: center; color: #333; margin: 30px 0;">Setting Up Your Course Subpages</h2>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>💰 Zero Ongoing Costs</h3>
-                    <p>No cloud credits, API fees, or subscription costs. Once you've downloaded the tools, everything runs locally without any recurring expenses.</p>
+                    <h3>📁 Option 1: GitHub Pages Folders</h3>
+                    <p>Create a folder for each course in your repository. The URL structure will be: <code>ai-teacher.github.io/course-name/</code></p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3>🔒 Complete Data Privacy</h3>
-                    <p>Your data never leaves your computer. Perfect for working with sensitive documents or proprietary information without privacy concerns.</p>
+                    <h3>🌐 Option 2: Custom Subdomains</h3>
+                    <p>For a more professional look, you can set up subdomains like <code>course1.ai-teacher.github.io</code> (requires custom domain setup).</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3>⚡ No Internet Required</h3>
-                    <p>Learn anywhere, anytime - even without an internet connection. Perfect for areas with limited connectivity or while traveling.</p>
+                    <h3>🔗 Option 3: URL Parameters</h3>
+                    <p>Use JavaScript to load content dynamically with URLs like <code>ai-teacher.github.io?course=python-intro</code> (more complex to implement).</p>
                 </div>
-                
-                <div class="feature-card">
-                    <h3>🎯 Real Hardware Understanding</h3>
-                    <p>Learn how to optimize AI for constrained environments - a valuable skill in edge computing and real-world deployments.</p>
-                </div>
+            </div>
+            
+            <div class="url-example">
+                <h3>📝 Example URL Structure:</h3>
+                <p>Main page: <strong>https://nathantechz.github.io/ai-teacher.github.io/</strong></p>
+                <p>Course 1: <strong>https://nathantechz.github.io/ai-teacher.github.io/course1/</strong></p>
+                <p>Course 2: <strong>https://nathantechz.github.io/ai-teacher.github.io/python-intro/</strong></p>
             </div>
             
             <div class="requirements">
-                <h3>🔧 What You Need to Get Started</h3>
+                <h3>🔧 How to Create Subpages on GitHub</h3>
                 <ul>
-                    <li>Windows laptop with 8GB RAM (any processor works fine)</li>
-                    <li>Internet connection for initial setup only (approx. 5-10GB downloads)</li>
-                    <li>Enthusiasm to learn (most important!)</li>
-                    <li>Basic English reading ability</li>
-                    <li>No prior programming experience required</li>
-                    <li>Willingness to experiment and practice</li>
+                    <li>Create a new folder for each course in your repository</li>
+                    <li>Add an index.html file in each course folder</li>
+                    <li>Update your main page links to point to the folder paths</li>
+                    <li>Use relative paths for assets (images, CSS, JS)</li>
+                    <li>Test all links after pushing to GitHub</li>
                 </ul>
-            </div>
-            
-            <div class="support-info">
-                <h3>🤝 Need Personal Help?</h3>
-                <p>All learning materials are free and self-contained. However, if you get stuck and need personal troubleshooting support via call or WhatsApp, I offer paid consultation at nominal rates (₹100-200 per session). This helps me dedicate focused time to solve your specific issues.</p>
-                <p><strong>Contact for support:</strong> [Your Phone Number] | Payment via GPay</p>
-            </div>
-            
-            <div class="social-proof">
-                <h3 style="color: #333;">Join Hundreds of Learners Worldwide</h3>
-                <p>Students, professionals, and curious minds from across India and beyond are already building AI skills with basic hardware. Your laptop is enough - your determination matters more than expensive equipment!</p>
             </div>
         </div>
         
         <div class="cta-section">
             <h2>🎉 Ready to Start Your Offline AI Journey?</h2>
-            <p>Begin with Course 1 to learn coding basics, then progress through each course step-by-step. Each lesson builds on the previous one, taking you from complete beginner to building your own AI applications - all without cloud dependencies!</p>
+            <p>Begin with Course 1 to learn coding basics, then progress through each course step-by-step. Each lesson builds on the previous one!</p>
         </div>
         
         <div style="background: white; border-radius: 15px; padding: 30px; margin: 20px 0;">
@@ -387,7 +386,7 @@
                     <p>Learn coding basics with Jupyter Notebook and Python</p>
                     <small>No prerequisites - Completely offline after setup</small>
                     <div class="prerequisite">Start here if you're new to coding</div>
-                    <a href="/ide-python-intro/">Start Learning</a>
+                    <a href="https://nathantechz.github.io/ai-teacher.github.io/course1/">Start Learning</a>
                 </div>
                 
                 <div class="course-card">
@@ -397,7 +396,7 @@
                     <p>Essential Python libraries for artificial intelligence</p>
                     <small>Requires: Basic Python knowledge - Runs offline</small>
                     <div class="prerequisite">Complete Course 1 first</div>
-                    <a href="/python-for-ai/">Continue</a>
+                    <a href="https://nathantechz.github.io/ai-teacher.github.io/python-ai/">Continue</a>
                 </div>
                 
                 <div class="course-card">
@@ -407,85 +406,39 @@
                     <p>Install tools, verify configuration, prepare your environment</p>
                     <small>Requires: Basic Python knowledge - One-time internet needed</small>
                     <div class="prerequisite">Complete Course 2 first</div>
-                    <a href="/laptop-setup/">Setup Environment</a>
+                    <a href="https://nathantechz.github.io/ai-teacher.github.io/laptop-setup/">Setup Environment</a>
                 </div>
-                
-                <div class="course-card">
-                    <div class="course-number">4</div>
-                    <div class="no-cloud-badge">OFFLINE</div>
-                    <h4>🤖 Local LLM Setup</h4>
-                    <p>Download and run AI language models locally</p>
-                    <small>Requires: Python & setup complete - One-time download</small>
-                    <div class="prerequisite">Complete Course 3 first</div>
-                    <a href="/local-llms/">Get LLMs</a>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-number">5</div>
-                    <div class="no-cloud-badge">OFFLINE</div>
-                    <h4>⚡ Running AI Models</h4>
-                    <p>Execute and interact with AI models on your laptop</p>
-                    <small>Requires: LLMs setup complete - Completely offline</small>
-                    <div class="prerequisite">Complete Course 4 first</div>
-                    <a href="/run-models/">Run Models</a>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-number">6</div>
-                    <div class="no-cloud-badge">OFFLINE</div>
-                    <h4>🔍 RAG Systems</h4>
-                    <p>Build smart document search with AI retrieval</p>
-                    <small>Requires: Model running skills - Works offline</small>
-                    <div class="prerequisite">Complete Course 5 first</div>
-                    <a href="/rag-systems/">Build RAG</a>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-number">7</div>
-                    <div class="no-cloud-badge">OFFLINE</div>
-                    <h4>🤖 Automation with n8n</h4>
-                    <p>Build no-code AI workflows and integrations</p>
-                    <small>Requires: Basic AI understanding - Local installation</small>
-                    <div class="prerequisite">Complete Course 6 first</div>
-                    <a href="/n8n-automation/">Automate</a>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-number">8</div>
-                    <div class="no-cloud-badge">OFFLINE</div>
-                    <h4>🚀 Multi-Agent Workflows</h4>
-                    <p>Coordinate AI agents for complex tasks with Crew AI</p>
-                    <small>Requires: All previous courses - Runs locally</small>
-                    <div class="prerequisite">Complete Course 7 first</div>
-                    <a href="/crew-ai/">Crew AI</a>
-                </div>
-                
-                <div class="course-card">
-                    <div class="course-number">9</div>
-                    <div class="no-cloud-badge">OFFLINE</div>
-                    <h4>🎓 Capstone Project</h4>
-                    <p>Build a complete AI application from scratch</p>
-                    <small>Requires: All previous courses - 100% offline</small>
-                    <div class="prerequisite">Final project</div>
-                    <a href="/capstone/">Start Project</a>
-                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="#" style="background: #667eea; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">View All Courses</a>
             </div>
         </div>
         
         <div class="offline-feature">
-            <h3>💡 Technologies We Use for Offline AI</h3>
-            <p>Our curriculum uses lightweight models and efficient frameworks that run well on consumer hardware:</p>
-            <ul>
-                <li><strong>Small Language Models:</strong> Phi-3, TinyLlama, Gemma-2B - optimized for CPU inference</li>
-                <li><strong>Efficient Frameworks:</strong> Ollama, LM Studio, GPT4All - designed for local operation</li>
-                <li><strong>Lightweight Libraries:</strong> Scikit-learn, Transformers.js - minimal resource requirements</li>
-                <li><strong>Optimization Techniques:</strong> Quantization, pruning, and distillation to reduce model size</li>
-            </ul>
+            <h3>💡 Implementation Guide</h3>
+            <p>To create subpages for your courses:</p>
+            <ol>
+                <li>In your GitHub repository, create a folder for each course (e.g., "course1", "python-ai")</li>
+                <li>Add an index.html file to each folder with the course content</li>
+                <li>Update the links on your main page to point to these folders</li>
+                <li>Use relative paths for all assets (images, CSS, JavaScript)</li>
+                <li>Test the links after pushing to GitHub</li>
+            </ol>
+            <p><strong>Example folder structure:</strong><br>
+            ai-teacher.github.io/<br>
+            ├── index.html (main page)<br>
+            ├── course1/<br>
+            │   └── index.html<br>
+            ├── python-ai/<br>
+            │   └── index.html<br>
+            └── laptop-setup/<br>
+                └── index.html</p>
         </div>
         
         <footer>
             <p>💡 <strong>Remember:</strong> Every AI expert started as a beginner. Your journey starts with Course 1 - completely offline!</p>
-            <p style="margin-top: 10px;">🤝 Need troubleshooting help? Contact: [Your Phone Number] | GPay accepted for consultation</p>
+            <p style="margin-top: 10px;">🤝 Need help setting up subpages? Contact for support</p>
             <p style="margin-top: 10px; opacity: 0.8;">Made with ❤️ for aspiring AI learners everywhere</p>
         </footer>
     </div>
