@@ -151,6 +151,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            position: relative;
         }
         
         .course-card:hover {
@@ -207,6 +208,21 @@
             margin-bottom: 15px;
         }
         
+        .prerequisite {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .learning-path {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            color: white;
+            font-weight: bold;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -219,6 +235,37 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .learning-path {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .learning-path .arrow {
+                margin: 10px 0;
+                transform: rotate(90deg);
+            }
+        }
+        
+        .arrow {
+            margin: 0 15px;
+            font-size: 1.5rem;
+        }
+        
+        .course-number {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -285,66 +332,102 @@
         
         <div class="cta-section">
             <h2>🎉 Ready to Start Your AI Journey?</h2>
-            <p>Begin with Course 1 to set up your laptop properly, then progress through each course step-by-step. Each lesson builds on the previous one, taking you from complete beginner to building your own AI applications!</p>
+            <p>Begin with Course 1 to learn coding basics, then progress through each course step-by-step. Each lesson builds on the previous one, taking you from complete beginner to building your own AI applications!</p>
         </div>
         
         <div style="background: white; border-radius: 15px; padding: 30px; margin: 20px 0;">
             <h2 style="text-align: center; color: #333; margin-bottom: 30px;">🎓 Your Complete Learning Path</h2>
             
+            <div class="learning-path">
+                <span>Start Here</span>
+                <span class="arrow">→</span>
+                <span>Build Foundation</span>
+                <span class="arrow">→</span>
+                <span>AI Concepts</span>
+                <span class="arrow">→</span>
+                <span>Advanced Projects</span>
+            </div>
+            
             <div class="course-navigation">
                 <div class="course-card">
-                    <h4>⚙️ Course 1</h4>
-                    <p>Setting Up Your Laptop</p>
-                    <small>Install tools, verify configuration, prepare your environment</small>
-                    <a href="/laptop-setup/">Start Here</a>
+                    <div class="course-number">1</div>
+                    <h4>📝 Python & IDE Introduction</h4>
+                    <p>Learn coding basics with Jupyter Notebook and Python</p>
+                    <small>No prerequisites</small>
+                    <div class="prerequisite">Start here if you're new to coding</div>
+                    <a href="/ide-python-intro/">Start Learning</a>
                 </div>
                 
                 <div class="course-card">
-                    <h4>📝 Course 2</h4>
-                    <p>IDE & Python Introduction</p>
-                    <small>Learn coding basics with Jupyter Notebook and Python</small>
-                    <a href="/ide-python-intro/">Learn Basics</a>
+                    <div class="course-number">2</div>
+                    <h4>🐍 Python for AI</h4>
+                    <p>Essential Python libraries for artificial intelligence</p>
+                    <small>Requires: Basic Python knowledge</small>
+                    <div class="prerequisite">Complete Course 1 first</div>
+                    <a href="/python-for-ai/">Continue</a>
                 </div>
                 
                 <div class="course-card">
-                    <h4>🐍 Course 3</h4>
-                    <p>Python for AI</p>
-                    <small>Essential Python libraries for artificial intelligence</small>
-                    <a href="/python-for-ai/">Python AI</a>
+                    <div class="course-number">3</div>
+                    <h4>⚙️ Setting Up Your Laptop</h4>
+                    <p>Install tools, verify configuration, prepare your environment</p>
+                    <small>Requires: Basic Python knowledge</small>
+                    <div class="prerequisite">Complete Course 2 first</div>
+                    <a href="/laptop-setup/">Setup Environment</a>
                 </div>
                 
                 <div class="course-card">
-                    <h4>🤖 Course 4</h4>
-                    <p>Local LLM Setup</p>
-                    <small>Download and run AI language models locally</small>
+                    <div class="course-number">4</div>
+                    <h4>🤖 Local LLM Setup</h4>
+                    <p>Download and run AI language models locally</p>
+                    <small>Requires: Python & setup complete</small>
+                    <div class="prerequisite">Complete Course 3 first</div>
                     <a href="/local-llms/">Get LLMs</a>
                 </div>
                 
                 <div class="course-card">
-                    <h4>⚡ Course 5</h4>
-                    <p>Running AI Models</p>
-                    <small>Execute and interact with AI models on your laptop</small>
+                    <div class="course-number">5</div>
+                    <h4>⚡ Running AI Models</h4>
+                    <p>Execute and interact with AI models on your laptop</p>
+                    <small>Requires: LLMs setup complete</small>
+                    <div class="prerequisite">Complete Course 4 first</div>
                     <a href="/run-models/">Run Models</a>
                 </div>
                 
                 <div class="course-card">
-                    <h4>🔍 Course 6</h4>
-                    <p>RAG Systems</p>
-                    <small>Build smart document search with AI retrieval</small>
+                    <div class="course-number">6</div>
+                    <h4>🔍 RAG Systems</h4>
+                    <p>Build smart document search with AI retrieval</p>
+                    <small>Requires: Model running skills</small>
+                    <div class="prerequisite">Complete Course 5 first</div>
                     <a href="/rag-systems/">Build RAG</a>
                 </div>
+                
                 <div class="course-card">
-                    <h4>🤖 Course 7</h4>
-                    <p>Automation with n8n</p>
-                    <small>Build no-code AI workflows and integrations</small>
+                    <div class="course-number">7</div>
+                    <h4>🤖 Automation with n8n</h4>
+                    <p>Build no-code AI workflows and integrations</p>
+                    <small>Requires: Basic AI understanding</small>
+                    <div class="prerequisite">Complete Course 6 first</div>
                     <a href="/n8n-automation/">Automate</a>
                 </div>
 
                 <div class="course-card">
-                    <h4>🚀 Course 8</h4>
-                    <p>Multi-Agent Workflows with Crew AI</p>
-                    <small>Coordinate AI agents for complex tasks</small>
+                    <div class="course-number">8</div>
+                    <h4>🚀 Multi-Agent Workflows</h4>
+                    <p>Coordinate AI agents for complex tasks with Crew AI</p>
+                    <small>Requires: All previous courses</small>
+                    <div class="prerequisite">Complete Course 7 first</div>
                     <a href="/crew-ai/">Crew AI</a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">9</div>
+                    <h4>🎓 Capstone Project</h4>
+                    <p>Build a complete AI application from scratch</p>
+                    <small>Requires: All previous courses</small>
+                    <div class="prerequisite">Final project</div>
+                    <a href="/capstone/">Start Project</a>
                 </div>
             </div>
         </div>
